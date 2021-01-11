@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+
+    <title>Eli Andrade's page</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kufam:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="header-item header-title">EliAndrade's Projects</div>
+    </header>
+
+    <div id="content">
+        <div class="projects-grid">
+            <div class="project-item" style="background-image: url('images/BrowserMIDI.png');"
+                onclick="getIframe(this, 'https://eliandrade.github.io/BrowserMIDI/');">
+            </div>
+
+            <div class="project-item" style="background-image: url('images/theflowbot.png')" ;
+                onclick="window.location = 'https://discord.com/api/oauth2/authorize?client_id=780129850433208361&permissions=2117467728&scope=bot'">
+
+            </div>
+
+            <div class="project-item" style="background-image: url('images/Time Jump.png')" ;
+                onclick="window.location = 'https://gamejolt.com/games/JumpTime/431402'">
+
+            </div>
+
+            <div class="project-item" style="background-image: url('images/soundcloud.png')" ;
+                onclick="window.location = 'https://soundcloud.com/eliandrade'">
+
+            </div>
+
+            <div class="project-item">
+                <div class="project-item-name">
+                    Project X
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-item-name">
+                    Project X
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-content">Eli Andrade
+            <image class="footer-image" src="images/GitHub-Mark-32px.png"
+                onclick="window.location = 'https://github.com/EliAndrade'"></image>
+        </div>
+    </footer>
+
+
+    <script>
+        function getIframe(e, url) {
+            let div = document.createElement("div");
+            let iframe = document.createElement("iframe");
+
+            iframe.src = url;
+            div.style.zIndex = 9999;
+
+            e.append(div);
+            div.append(iframe);
+
+            div.style.width = "100%";
+            div.style.height = "100%";
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.border = "0";
+        }
+    </script>
+</body>
+
+</html>
